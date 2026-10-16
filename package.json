@@ -1,0 +1,49 @@
+{
+  "name": "@docuhook/node",
+  "version": "1.0.0",
+  "description": "Official DocuHook client for Node.js — merge JSON into HTML templates via the DocuHook API",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --clean",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "docuhook",
+    "pdf",
+    "webhook",
+    "html",
+    "template",
+    "merge"
+  ],
+  "author": "DocuHook",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rustemas/docuhook-node.git"
+  },
+  "homepage": "https://docuhook.com",
+  "bugs": {
+    "url": "https://github.com/rustemas/docuhook-node/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "tsup": "^8.3.5",
+    "typescript": "^5.6.3"
+  }
+}
